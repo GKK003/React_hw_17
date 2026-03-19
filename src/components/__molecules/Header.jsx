@@ -79,7 +79,7 @@ function Header({ count, setCount }) {
           className="w-[360px] h-[256px] flex-col justify-start items-center bg-white shadow-[0px_20px_50px_-20px_rgba(29,32,38,0.5)] absolute top-20 right-0 z-[9999] rounded-[10px]"
         >
           <div className="w-[100%] h-[50px] flex justify-start items-center pl-4 border-b border-[#E4E9F2]">
-            <p className="text-[#1D2026] text-[16px] font-bold">cart</p>
+            <p className="text-[#1D2026] text-[16px] font-bold">Cart</p>
           </div>
 
           <div

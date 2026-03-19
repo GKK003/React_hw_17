@@ -35,14 +35,14 @@ export default function MobileSwiper(props) {
             swiper.navigation.update();
           });
         }}
-        className="rounded-[16px] overflow-hidden"
+        className="rounded-[16px] overflow-hidden gg:rounded-[0px]"
       >
         {images.map((img, index) => (
           <SwiperSlide key={index}>
             <img
               src={img}
               alt={`shoe-${index + 1}`}
-              className="w-full h-[420px] object-cover rounded-[16px]"
+              className="w-full h-[420px] object-cover rounded-[16px] gg:rounded-[0px]"
             />
           </SwiperSlide>
         ))}
@@ -51,7 +51,7 @@ export default function MobileSwiper(props) {
       <button
         ref={prevRef}
         type="button"
-        className="absolute left-4 top-1/2 z-20 -translate-y-1/2 w-14 h-14 rounded-full bg-white flex items-center justify-center text-3xl font-bold shadow-md cursor-pointer"
+        className="absolute left-4 top-1/2 z-20 -translate-y-1/2 w-10 h-10 rounded-full bg-white flex items-center justify-center text-3xl font-bold shadow-md cursor-pointer pb-1.5"
       >
         &#8249;
       </button>
@@ -59,7 +59,7 @@ export default function MobileSwiper(props) {
       <button
         ref={nextRef}
         type="button"
-        className="absolute right-4 top-1/2 z-20 -translate-y-1/2 w-14 h-14 rounded-full bg-white flex items-center justify-center text-3xl font-bold shadow-md cursor-pointer"
+        className="absolute right-4 top-1/2 z-20 -translate-y-1/2 w-10 h-10 rounded-full bg-white flex items-center justify-center text-3xl font-bold shadow-md cursor-pointer pb-1.5"
       >
         &#8250;
       </button>

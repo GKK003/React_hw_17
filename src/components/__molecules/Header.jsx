@@ -50,7 +50,7 @@ function Header({ count, setCount }) {
 
   return (
     <>
-      <header className="w-[80%] h-[100px] flex justify-start items-center relative border-b border-[#E4E9F2]">
+      <header className="w-[80%] h-[100px] flex justify-start items-center relative border-b border-[#E4E9F2] gg:w-[90%] gg:h-[70px]">
         <img
           src={Burger}
           className="hidden lg:block cursor-pointer"
@@ -58,7 +58,9 @@ function Header({ count, setCount }) {
           alt="menu"
         />
 
-        <h1 className="text-[#1D2026] text-2xl font-bold pl-2">sneakers</h1>
+        <h1 className="text-[#1D2026] text-2xl font-bold pl-2 gg:pl-3">
+          sneakers
+        </h1>
 
         <div className="flex gap-5 ml-9 justify-start items-center">
           <HeaderTxt txt="Collections" />
@@ -68,19 +70,27 @@ function Header({ count, setCount }) {
           <HeaderTxt txt="Contact" />
         </div>
 
-        <div className="flex gap-5 justify-center items-center absolute top-7 right-0">
-          <img
-            onClick={() => {
-              HandleDisplay();
-              HandleDisplay1();
-            }}
-            className="w-[21.82px] h-[20px] cursor-pointer"
-            src={Cart}
-            alt="cart"
-          />
+        <div className="flex gap-5 justify-center items-center absolute top-7 right-0 gg:top-5">
+          <div className="relative">
+            <img
+              onClick={() => {
+                HandleDisplay();
+                HandleDisplay1();
+              }}
+              className="w-[21.82px] h-[20px] cursor-pointer"
+              src={Cart}
+              alt="cart"
+            />
+
+            {count !== 0 && (
+              <div className="w-[19px] h-[13px] rounded-[6.5px] bg-[#FF7E1B] flex justify-center items-center text-white absolute top-[-10px] right-[-10px] text-[10px]">
+                {count}
+              </div>
+            )}
+          </div>
 
           <img
-            className="rounded-full w-[50px] h-[50px] border-2 border-[#FF7E1B] cursor-pointer"
+            className="rounded-full w-[50px] h-[50px] border-2 border-[#FF7E1B] cursor-pointer gg:w-[30px] gg:h-[30px] gg:border-0"
             src={ProfilePic}
             alt="profile"
           />
@@ -88,7 +98,7 @@ function Header({ count, setCount }) {
           <div
             ref={isVisible}
             style={{ display: display }}
-            className="w-[360px] h-[256px] flex-col justify-start items-center bg-white shadow-[0px_20px_50px_-20px_rgba(29,32,38,0.5)] absolute top-20 right-0 z-[9999] rounded-[10px] gg:right-[-25px]  gg:w-[340px]"
+            className="w-[360px] h-[256px] flex-col justify-start items-center bg-white shadow-[0px_20px_50px_-20px_rgba(29,32,38,0.5)] absolute top-20 right-0 z-[9999] rounded-[10px] gg:right-[-10px]  gg:w-[340px]"
           >
             <div className="w-[100%] h-[50px] flex justify-start items-center pl-4 border-b border-[#E4E9F2]">
               <p className="text-[#1D2026] text-[16px] font-bold">Cart</p>

@@ -7,12 +7,12 @@ function Content({ count, setCount }) {
   const [value, setValue] = useState(0);
 
   return (
-    <div className="w-[80%] mt-8 mr-7">
-      <div className="flex w-full justify-start items-center gap-16 lg:flex-col lg:pb-8">
+    <div className="w-[80%] mt-8 mr-7 gg:mt-0 gg:w-full gg:mr-0">
+      <div className="flex w-full justify-start items-center gap-16 lg:flex-col lg:pb-8 gg:gap-5">
         <MobileSwiper className="relative w-[500px] max-w-full hidden lg:flex" />
         <ProductGallery className="gallery-wrap  lg:hidden" />
 
-        <div className="max-w-[455px] w-full flex flex-col justify-start items-start gap-5">
+        <div className="max-w-[455px] w-full flex flex-col justify-start items-start gap-5 gg:px-3 ">
           <p className="text-[#FF7E1B] text-[13px] font-bold">
             Sneaker Company
           </p>

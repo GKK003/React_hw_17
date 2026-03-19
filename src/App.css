@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-*: initial;
+}
+
+@custom-variant 2xl (@media (max-width: 1535px));
+@custom-variant xl (@media (max-width: 1279px));
+@custom-variant lg (@media (max-width: 1000px));
+@custom-variant md (@media (max-width: 767px));
+@custom-variant sm (@media (max-width: 639px));
+@custom-variant gg (@media (max-width: 450px));
+
+body {
+  background-color: #ffffff;
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+}

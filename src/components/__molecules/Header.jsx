@@ -86,7 +86,9 @@ function Header({ count, setCount }) {
             style={{ display: display1 }}
             className="flex w-full h-[50%] justify-center items-center"
           >
-            <p>Your cart is empty</p>
+            <p className="text-[#69707D] text-[16px] font-bold">
+              Your cart is empty
+            </p>
           </div>
 
           <div

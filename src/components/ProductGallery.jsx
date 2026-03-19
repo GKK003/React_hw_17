@@ -14,7 +14,7 @@ import "swiper/css/thumbs";
 
 const images = [Shoe4, Shoe3, Shoe2, Shoe1];
 
-export default function ProductGallery() {
+export default function ProductGallery(props) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +51,7 @@ export default function ProductGallery() {
   }
 
   return (
-    <div className="gallery-wrap">
+    <div className="gallery-wrap  lg:hidden">
       <Swiper
         spaceBetween={10}
         navigation={false}

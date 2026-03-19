@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import ProductGallery from "../ProductGallery";
 import CartWhite from "../../assets/images/cartwhite.png";
+import MobileSwiper from "../Swiper";
 
 function Content({ count, setCount }) {
   const [value, setValue] = useState(0);
 
   return (
     <div className="w-[80%] mt-8 mr-7">
-      <div className="flex w-full justify-start items-center gap-16">
-        <ProductGallery />
+      <div className="flex w-full justify-start items-center gap-16 lg:flex-col lg:pb-8">
+        <MobileSwiper className="relative w-[500px] max-w-full hidden lg:flex" />
+        <ProductGallery className="gallery-wrap  lg:hidden" />
 
-        <div className="w-[455px] flex flex-col justify-start items-start gap-5">
+        <div className="max-w-[455px] w-full flex flex-col justify-start items-start gap-5">
           <p className="text-[#FF7E1B] text-[13px] font-bold">
             Sneaker Company
           </p>
@@ -25,8 +27,8 @@ function Content({ count, setCount }) {
             the weather can offer.
           </p>
 
-          <div className="flex flex-col gap-2">
-            <div className="flex gap-3">
+          <div className="flex flex-col gap-2 lg:flex-row lg:justify-between lg:w-[80%]">
+            <div className="flex gap-3 ">
               <p className="text-[#1D2026] text-[28px] tracking-[0px] font-bold leading-[100%]">
                 $125.00
               </p>

@@ -130,8 +130,8 @@ function Header({ count, setCount }) {
             <button
               onClick={() => {
                 if (count !== 0) {
-                  alert(`You Purchased ${count} shoes `);
                   localStorage.setItem("count", JSON.stringify(count));
+                  alert(`You Purchased ${count} shoes `);
                 }
               }}
               className="bg-[#FF7E1B] rounded-[10px] w-[90%] h-[56px] text-white cursor-pointer hover:opacity-50"

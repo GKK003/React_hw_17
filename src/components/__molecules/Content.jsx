@@ -48,27 +48,35 @@ function Content({ count, setCount }) {
               <p
                 className="text-[#FF7E1B] text-[30px] font-bold cursor-pointer"
                 onClick={() => {
-                  if (count !== 0) {
-                    setCount(count - 1);
+                  if (value !== 0) {
+                    setValue(value - 1);
                   }
                 }}
               >
                 -
               </p>
 
-              <p className="text-[16px] pt-1 text-[#1D2026]">{count}</p>
+              <p className="text-[16px] pt-1 text-[#1D2026]">{value}</p>
 
               <p
                 className="text-[#FF7E1B] text-[30px] font-bold pb-0.5 cursor-pointer"
                 onClick={() => {
-                  setCount(count + 1);
+                  setValue(value + 1);
                 }}
               >
                 +
               </p>
             </div>
 
-            <div className="w-full bg-[#FF7E1B] h-[56px] gap-2.5 flex justify-center items-center rounded-[10px] cursor-pointer hover:opacity-50">
+            <div
+              className="w-full bg-[#FF7E1B] h-[56px] gap-2.5 flex justify-center items-center rounded-[10px] cursor-pointer hover:opacity-50"
+              onClick={() => {
+                if (value !== 0) {
+                  setCount(count + value);
+                  setValue(0);
+                }
+              }}
+            >
               <img className="w-[17px] h-[16px]" src={CartWhite} alt="cart" />
               <p className="text-white text-[16px]">Add to cart</p>
             </div>

@@ -147,6 +147,8 @@ function Header({ count, setCount }) {
               onClick={() => {
                 if (count !== 0) {
                   alert(`You Purchased ${count} shoes`);
+                  setCount(0);
+                  setDisplay("none");
                 }
               }}
               className="bg-[#FF7E1B] rounded-[10px] w-[90%] h-[56px] text-white cursor-pointer hover:opacity-50"
